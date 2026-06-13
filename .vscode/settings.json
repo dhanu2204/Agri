@@ -1,0 +1,5 @@
+{
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.inlineSuggest.edits.showCollapsed": true
+}

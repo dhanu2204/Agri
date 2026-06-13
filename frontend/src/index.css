@@ -1,0 +1,159 @@
+:root {
+  /* HSL tailored color palette - Premium Forest Green Theme */
+  --primary: #1b4332;
+  --primary-hover: #1b4332dd;
+  --accent: #52b788;
+  --accent-hover: #40916c;
+  --bg: #f4f9f4;
+  --card-bg: #ffffff;
+  --text: #2d3a34;
+  --text-h: #0f1a15;
+  --border: #d8f3dc;
+  --shadow: rgba(27, 67, 50, 0.08) 0 8px 24px -4px, rgba(27, 67, 50, 0.04) 0 4px 12px -2px;
+  
+  --sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --heading: 'Outfit', 'Inter', system-ui, sans-serif;
+  --mono: ui-monospace, monospace;
+
+  font: 16px/1.6 var(--sans);
+  letter-spacing: 0.1px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #52b788;
+    --primary-hover: #74c69d;
+    --accent: #52b788;
+    --accent-hover: #40916c;
+    --bg: #090e0b;
+    --card-bg: #111a14;
+    --text: #c7d6cd;
+    --text-h: #f1f7f4;
+    --border: #1f362a;
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 30px -5px, rgba(0, 0, 0, 0.2) 0 4px 15px -3px;
+  }
+}
+
+/* Load beautiful modern font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  min-height: 100vh;
+}
+
+#root {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Common Premium Card Layout */
+.card, .weather-card, .advisory-container, .market-card, .voice-card, .calc-card, .auth-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(27, 67, 50, 0.12) 0 12px 32px -4px;
+}
+
+/* Custom Styled Inputs for Forms and Fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-h);
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(82, 183, 136, 0.15);
+}
+
+/* Premium Buttons Styling */
+button, .btn {
+  font-family: var(--sans);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Primary buttons */
+button[type="submit"], .btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+button[type="submit"]:hover, .btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Accent Buttons */
+.btn-accent {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-accent:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* Typography styles */
+h1, h2, h3, h4 {
+  font-family: var(--heading);
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}

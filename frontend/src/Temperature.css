@@ -1,0 +1,224 @@
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 400px;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, rgba(82, 183, 136, 0.15) 0%, rgba(27, 67, 50, 0.05) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(82, 183, 136, 0.2);
+  border-radius: 24px;
+  padding: 32px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 50px rgba(82, 183, 136, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .weather-card {
+    background: linear-gradient(135deg, rgba(82, 183, 136, 0.1) 0%, rgba(22, 23, 29, 0.4) 100%);
+    border: 1px solid rgba(82, 183, 136, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.location-container {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-h);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.location-icon {
+  font-size: 22px;
+}
+
+.weather-main-icon {
+  font-size: 48px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.weather-body {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.temperature-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.temp-number {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-h);
+}
+
+.temp-unit {
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 8px;
+  color: #52b788;
+}
+
+.description-container {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+
+.weather-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  border-top: 1px solid rgba(82, 183, 136, 0.15);
+  padding-top: 24px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(82, 183, 136, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-item {
+    background: rgba(22, 23, 29, 0.5);
+  }
+}
+
+.stat-icon {
+  font-size: 24px;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.stat-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.weather-loading, .weather-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  padding: 60px;
+  color: var(--text);
+}
+
+.weather-error {
+  color: #d90429;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* AI Advisory Box Styles */
+.advisory-container {
+  margin-top: 24px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: left;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  .advisory-container {
+    background: rgba(22, 23, 29, 0.4);
+  }
+}
+
+.advisory-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.advisory-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.advisory-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.advisory-subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.subtitle-do {
+  color: #2e7d32;
+}
+
+.subtitle-dont {
+  color: #d90429;
+}
+
+.advisory-item {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 140%;
+  margin: 0;
+}
