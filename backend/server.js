@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000
 app.use(cors())
 app.use(express.json())
 
-const mongouri = process.env.MONGODB_URI || 'mongodb+srv://root:Dhanush%402204@agri.jv13cq3.mongodb.net/?appName=AGRI'
+const mongouri = 'mongodb+srv://hatake2kakashi2_db_user:uSKChsPB3m7kOt3b@agri.pugce1u.mongodb.net/?appName=agri'
 mongoose.connect(mongouri).then(()=>{console.log("connected to db")}).catch((err)=>{console.log(err)})
 
 // Register User
